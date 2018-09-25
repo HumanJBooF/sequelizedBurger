@@ -1,0 +1,55 @@
+body {
+    background: url('../img/burgs.jpg') fixed no-repeat !important;
+    background-size: cover !important;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.eat {
+    border-bottom: 2pt solid;
+}
+
+.card.small {
+    height: 25% !important;
+}
+
+.horizontal, .card.small {
+    background: rgba(255, 255, 255, 0.75);
+    border: 2pt solid;
+}
+
+.uneaten {
+    background-color: #88A65E !important;
+    border: 2pt solid black;
+}
+
+.devoured {
+    background-color: #8C2318 !important;
+    border: 2pt solid black;
+}
+
+.uneaten, .devoured {
+    margin-bottom: 10px !important;
+    line-height: 2pt;
+    font-weight: bold;
+}
+
+.burgButton {
+    background-color: #F2C45A !important;
+    color: #5E8C6A !important;
+    font-weight: bold;
+}
+
+.material-tooltip {
+    background-color: #BA2640 !important;
+}
+
+.input-field input[type=text] {
+    color: #BA2640 !important;
+    border-bottom: 1pt solid !important;
+    font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+    color: #FF0000;
+    opacity: 0.5 !important;
+}
