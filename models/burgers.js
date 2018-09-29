@@ -10,12 +10,10 @@ module.exports = (sequelize, DataTypes) => {
         devoured: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
-            allowNull: false
         },
         deleted: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
-            allowNull: false
         }
     });
 

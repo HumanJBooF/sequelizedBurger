@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
 router.get('/burgers', (req, res) => {
     db.burgers.findAll({})
-        .then((dbBurgers) => {
+        .then(dbBurgers => {
             let hbsBurgers = {
                 burgers: dbBurgers
             }
@@ -22,7 +22,7 @@ router.post('/burgers/create', (req, res) => {
 
     db.burgers.create({
         burger_name: newBurg
-    }).then((dbBurger) => {
+    }).then(dbBurger => {
         console.log(`New Burger Added: ${dbBurger}`);
         res.redirect('/');
     });
@@ -31,7 +31,7 @@ router.post('/burgers/create', (req, res) => {
 router.post('/burgers/:id', (req, res) => {
 
     let id = req.params.id
-
+    console.log(`WHAT IS THIS RIGHT HURR::: ${req.body.devoured}`)
     db.burger.update({
         devoured: req.body.devoured
     },
@@ -39,8 +39,10 @@ router.post('/burgers/:id', (req, res) => {
             where: {
                 id: id
             }
-        }).then((dbBurger) => {
-            console.log(`DEVOURED NUMBER: ${id}`);
+        }).then(dbBurger => {
+            console.log(dbBurger);
+            res.redirect('/');
+        }).catch(err => {
             res.redirect('/');
         });
 });
@@ -54,7 +56,6 @@ router.post('/delete/:id', (req, res) => {
                 id: id
             }
         }).then((dbBurger) => {
-            console.log(`DELETED NUMBER: ${id}`);
             res.redirect('/');
         });
 });
