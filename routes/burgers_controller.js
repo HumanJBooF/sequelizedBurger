@@ -29,9 +29,7 @@ router.post('/burgers/create', (req, res) => {
 });
 
 router.post('/burgers/:id', (req, res) => {
-
     let id = req.params.id
-    console.log('WHAT IS THIS RIGHT HURR:::', req.body)
     db.burgers.update({
         devoured: true
     },
@@ -41,8 +39,6 @@ router.post('/burgers/:id', (req, res) => {
             }
         }).then(dbBurger => {
             console.log(dbBurger);
-            res.redirect('/');
-        }).catch(err => {
             res.redirect('/');
         });
 });
