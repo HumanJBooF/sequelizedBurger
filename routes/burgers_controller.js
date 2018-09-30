@@ -31,9 +31,9 @@ router.post('/burgers/create', (req, res) => {
 router.post('/burgers/:id', (req, res) => {
 
     let id = req.params.id
-    console.log(`WHAT IS THIS RIGHT HURR::: ${req.body.devoured}`)
-    db.burger.update({
-        devoured: req.body.devoured
+    console.log('WHAT IS THIS RIGHT HURR:::', req.body)
+    db.burgers.update({
+        devoured: true
     },
         {
             where: {
@@ -49,7 +49,7 @@ router.post('/burgers/:id', (req, res) => {
 
 router.post('/delete/:id', (req, res) => {
     let id = req.params.id
-    db.burger.update({
+    db.burgers.update({
         deleted: true
     }, {
             where: {
