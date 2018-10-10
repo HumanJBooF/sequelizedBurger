@@ -1,7 +1,7 @@
 # sequelizedBurger
 
 ### Check out the live version on heroku
-**[Eat-Da-Burger]()**
+**[Eat-Da-Burger](https://eat-dat-sequelized-burg.herokuapp.com/burgers)**
 
 ## Description 
 
