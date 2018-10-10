@@ -9,7 +9,7 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 
 // static directory
-app.use(express.static('public'));
+app.use('/', express.static('public'));
 
 // set up handlebars
 const exphbs = require('express-handlebars');
