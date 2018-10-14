@@ -21,29 +21,30 @@ This app is an updated version of my eat-da-burgers app, except this time its us
 - NPM mysql2
 - NPM express-handlebars
 - NPM sequelize
-- NPM sequelize-clie
-    * Optional use
+- NPM sequelize-cli
+    - Optional use
     - vagrant
 
-## Instructions for local use
 **prerequisites**
-- Install node.js/npm
+- Install node.js, yarn or npm
 
-    - Git-Clone to repo to a spot on your desktop
-    - in your favorite CLI (gitbash/terminal) cd to the folder with .git
-    - there will also be a vagrantfile in this folder
-        - (if you do not wish to use vagrant skip these next steps)
+## Instructions for local use
+
+ - Git-Clone to repo to a spot on your desktop
+ - in your favorite CLI (gitbash/terminal) cd to the folder with .git
+ - there will also be a vagrantfile in this folder
+     - (if you do not wish to use vagrant skip these next steps)
         - vagrant up to initialize the box
         - vagrant ssh when ready
         - cd /var/www
-        - npm install
+        - yarn install(or npm install, delete yarn.lock file first)
         - node server.js
         - go to 192.168.15.10:3000 on your browser
         - (make sure you have a mysql database and run the schema/seeds file to set up database)
-    - npm install
-    - set up your favorite mysql database (run the schema/seed files to start your table)
-    - node server.js
-    - localhost:3000 on your browser
+- yarn install (or npm install, delete yarn.lock file first)
+- set up your favorite mysql database (run the schema/seed files to start your table)
+- node server.js
+- localhost:3000 on your browser
 
 
 # Author
